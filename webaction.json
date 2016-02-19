@@ -7,7 +7,7 @@
     "cn": "根据关键词获取资源磁力链",
     "en": "Get relavant magnet link according to keyword"
   },
-  "icon": "http://firicon.fir.im/7ad272d48806e061f5b3e22673b80c3117e82607",
+  "icon": "http://7xityp.com2.z0.glb.qiniucdn.com/assets/magnet.png",
   "required": [{
     "count": 1,
     "type": "Text"
