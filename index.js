@@ -31,6 +31,16 @@ app.get('/magnet', (req, res) => {
       })
     }
 
+    if (result.total <= 0) {
+      return res.send({
+        type: 'Error',
+        data: [{
+          code: 404,
+          message: '没有找到相关磁力链接'
+        }]
+      })
+    }
+
     torrent.magnet(result.torrents[0], (err, link) => {
       if (err) {
         return res.send({
@@ -42,7 +52,7 @@ app.get('/magnet', (req, res) => {
         })
       }
 
-      return res.send(200, {
+      return res.send({
         type: 'Text',
         data: [link]
       })
